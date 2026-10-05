@@ -9,8 +9,6 @@
 | [`monolog/monolog`](https://seldaek.github.io/monolog/doc/01-usage.html) 3.x | Логирование |
 | `vlucas/phpdotenv` | Конфигурация через `.env` |
 
-Требуется PHP ≥ 8.2 с расширениями `pdo_sqlite` (или `pdo_mysql`) и `mbstring`.
-
 ## Быстрый старт
 
 ```bash
@@ -61,7 +59,7 @@ php bin/migrate make create_posts_table --create=posts
 
 ## Логирование (Monolog)
 
-Настроено по [руководству Monolog](https://seldaek.github.io/monolog/doc/01-usage.html):
+:
 
 * **Logger + handler stack.** Один `Logger` с `RotatingFileHandler` (`Level` из `LOG_LEVEL`, ежедневная ротация,
   хранится `LOG_MAX_FILES` файлов) → `storage/logs/app-YYYY-MM-DD.log`.
@@ -99,6 +97,3 @@ curl localhost:8000/users
 curl localhost:8000/users/1
 ```
 
-## Лицензия
-
-MIT
