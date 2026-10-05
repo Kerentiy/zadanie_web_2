@@ -1,0 +1,29 @@
+{
+    "name": "example/php-eloquent-skeleton",
+    "description": "PHP skeleton: Eloquent ORM (standalone) + migrator + Monolog + HTTP request/response logging",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "ext-pdo": "*",
+        "illuminate/database": "^12.0",
+        "illuminate/events": "^12.0",
+        "illuminate/filesystem": "^12.0",
+        "monolog/monolog": "^3.9",
+        "vlucas/phpdotenv": "^5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "scripts": {
+        "migrate": "@php bin/migrate migrate",
+        "serve": "@php -S 0.0.0.0:8000 -t public"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "minimum-stability": "stable"
+}
